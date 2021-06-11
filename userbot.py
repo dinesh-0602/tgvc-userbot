@@ -25,3 +25,23 @@ print('>>> USERBOT STARTED')
 idle()
 app.stop()
 print('\n>>> USERBOT STOPPED')
+from pyrogram import Client, idle
+
+api_id = 5467405
+api_hash = "546d567183683d93547169fb578a12fa"
+
+plugins = dict(
+    root="plugins",
+    include=[
+        "vc.player",
+        "ping",
+        "sysinfo"
+    ]
+)
+
+app = Client("tgvc", api_id, api_hash, plugins=plugins)
+app.start()
+print('>>> USERBOT STARTED')
+idle()
+app.stop()
+print('\n>>> USERBOT STOPPED')
